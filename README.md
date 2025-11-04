@@ -1,5 +1,40 @@
 # quiz_app
 
+Understanding BLoC Pattern
+BLoC = Business Logic Component
+
+Events: User actions/triggers
+
+States: UI states that change based on events
+
+Bloc: Handles business logic and transforms events to states
+
+# When to Create Events, States, and Bloc Functions
+Events (When to create):
+User interactions (button taps, form submissions)
+
+Lifecycle events (app started, page loaded)
+
+External triggers (notifications, timers)
+
+Data needs (fetch, update, delete)
+
+States (When to create):
+Different UI states (loading, success, error, initial)
+
+Data changes that affect UI
+
+Authentication states
+
+Form validation states
+
+Bloc Functions:
+For each event, create a handler function
+
+Business logic and API calls go here
+
+State emissions based on logic results
+
 A new Flutter project.
 Clean Architecture, Bloc State management and hive cache and get it DI
 
@@ -12,6 +47,7 @@ feature(feature_name) -> domain(repositories(repository_name)) -> feature(featur
 feature(feature_name)->domain->repositories ->
 feature/feature_name/data/data_source(local, remote) ->
 feature/feature_name/data/repositories/repository_impl ->
+feature/feature_name/presentation/bloc -> bloc_event, bloc_state, bloc_name
 
 )
 

@@ -53,3 +53,33 @@ class QuestionModel extends HiveObject {
     );
   }
 }
+
+// @HiveType(typeId: 1)
+// class Question extends HiveObject {
+//   @HiveField(0)
+//   String category;
+//
+//   @HiveField(1)
+//   String type;
+//
+//   @HiveField(2)
+//   String difficulty;
+//
+//   @HiveField(3)
+//   String question;
+//
+//   @HiveField(4)
+//   String correctAnswer;
+//
+//   @HiveField(5)
+//   List<String> incorrectAnswers;
+//
+//   Question({
+//     required this.category,
+//     required this.type,
+//     required this.difficulty,
+//     required this.question,
+//     required this.correctAnswer,
+//     required this.incorrectAnswers,
+//   });
+// }
