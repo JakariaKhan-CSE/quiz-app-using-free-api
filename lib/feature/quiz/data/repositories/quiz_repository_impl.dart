@@ -6,6 +6,7 @@ import 'package:quiz_app/feature/quiz/domain/repositories/quiz_repositories.dart
 
 import '../../../../core/error/failure.dart';
 import '../../domain/entities/question.dart';
+import '../model/question_model.dart';
 
 class QuizReposiotryImpl implements QuizRepository {
   final QuizRemoteDataSource remoteDataSource;
