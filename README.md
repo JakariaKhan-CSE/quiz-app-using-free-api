@@ -9,7 +9,10 @@ feature(feature_name) -> domain(entities(look_model)) -> data(model(model_name))
 dart run build_runner build (if use HiveObject)
 
 feature(feature_name) -> domain(repositories(repository_name)) -> feature(feature_name) -> domain -> usecase (usecase_name) ->
-feature(feature_name)->domain->repositories
+feature(feature_name)->domain->repositories ->
+feature/feature_name/data/data_source(local, remote) ->
+feature/feature_name/data/repositories/repository_impl ->
+
 )
 
 ## Getting Started
