@@ -18,6 +18,7 @@ class QuizRemoteDataSourceImpl implements QuizRemoteDataSource{
     if(response.statusCode == 200)
       {
         final jsonMap = json.decode(response.body);
+        print(jsonMap);
         if(jsonMap['response_code']==0)
           {
             return (jsonMap['results']as List).map((item) => QuestionModel.fromJson(item),).toList();
