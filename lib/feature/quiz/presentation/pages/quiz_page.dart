@@ -11,7 +11,7 @@ class QuizPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: Text('Quiz App')),
-      body: BlocBuilder(
+      body: BlocBuilder<QuizBloc, QuizState>(
         builder: (context, state) {
           if (state is QuizLoading) {
             return const Center(child: CircularProgressIndicator());
@@ -20,7 +20,7 @@ class QuizPage extends StatelessWidget {
             final answer = [
               ...question.incorrectAnswers,
               question.correctAnswer,
-            ]..shuffle();
+            ];
             return Padding(
               padding: EdgeInsets.all(16),
               child: Column(

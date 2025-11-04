@@ -1,5 +1,7 @@
+// lib/features/quiz/data/models/question_model.dart
 import 'package:hive/hive.dart';
-import 'package:quiz_app/feature/quiz/domain/entities/question.dart';
+
+import '../../domain/entities/question.dart';
 
 part 'question_model.g.dart';
 
@@ -18,7 +20,7 @@ class QuestionModel extends HiveObject {
   final String question;
 
   @HiveField(4)
-  final String correctedAnswer;
+  final String correctAnswer;
 
   @HiveField(5)
   final List<String> incorrectAnswers;
@@ -28,7 +30,7 @@ class QuestionModel extends HiveObject {
     required this.type,
     required this.difficulty,
     required this.question,
-    required this.correctedAnswer,
+    required this.correctAnswer,
     required this.incorrectAnswers,
   });
 
@@ -38,48 +40,19 @@ class QuestionModel extends HiveObject {
       type: json['type'],
       difficulty: json['difficulty'],
       question: json['question'],
-      correctedAnswer: json['correctedAnswer'],
-      incorrectAnswers: List<String>.from(json['incorrectAnswers']),
+      correctAnswer: json['correct_answer'],
+      incorrectAnswers: List<String>.from(json['incorrect_answers']),
     );
   }
+
   Question toEntity() {
     return Question(
       category: category,
       type: type,
       difficulty: difficulty,
       question: question,
-      correctAnswer: correctedAnswer,
+      correctAnswer: correctAnswer,
       incorrectAnswers: incorrectAnswers,
     );
   }
 }
-
-// @HiveType(typeId: 1)
-// class Question extends HiveObject {
-//   @HiveField(0)
-//   String category;
-//
-//   @HiveField(1)
-//   String type;
-//
-//   @HiveField(2)
-//   String difficulty;
-//
-//   @HiveField(3)
-//   String question;
-//
-//   @HiveField(4)
-//   String correctAnswer;
-//
-//   @HiveField(5)
-//   List<String> incorrectAnswers;
-//
-//   Question({
-//     required this.category,
-//     required this.type,
-//     required this.difficulty,
-//     required this.question,
-//     required this.correctAnswer,
-//     required this.incorrectAnswers,
-//   });
-// }

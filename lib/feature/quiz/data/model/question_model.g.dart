@@ -21,7 +21,7 @@ class QuestionModelAdapter extends TypeAdapter<QuestionModel> {
       type: fields[1] as String,
       difficulty: fields[2] as String,
       question: fields[3] as String,
-      correctedAnswer: fields[4] as String,
+      correctAnswer: fields[4] as String,
       incorrectAnswers: (fields[5] as List).cast<String>(),
     );
   }
@@ -39,7 +39,7 @@ class QuestionModelAdapter extends TypeAdapter<QuestionModel> {
       ..writeByte(3)
       ..write(obj.question)
       ..writeByte(4)
-      ..write(obj.correctedAnswer)
+      ..write(obj.correctAnswer)
       ..writeByte(5)
       ..write(obj.incorrectAnswers);
   }
