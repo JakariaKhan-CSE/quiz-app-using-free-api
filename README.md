@@ -47,7 +47,8 @@ feature(feature_name) -> domain(repositories(repository_name)) -> feature(featur
 feature(feature_name)->domain->repositories ->
 feature/feature_name/data/data_source(local, remote) ->
 feature/feature_name/data/repositories/repository_impl ->
-feature/feature_name/presentation/bloc -> bloc_event, bloc_state, bloc_name
+feature/feature_name/presentation/bloc -> bloc_event, bloc_state, bloc_name ->
+screen_design -> Dependency Injection -> main
 
 )
 
