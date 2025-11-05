@@ -1,3 +1,21 @@
+lib/
+├── core/                ← সবার জন্য কমন জিনিস
+├── features/
+│   └── auth/            ← আমরা “লগইন” ফিচার বানাব
+│       ├── data/
+│       │   ├── datasources/      ← API কল
+│       │   ├── models/           ← JSON → Dart মডেল
+│       │   └── repositories/     ← RepositoryImpl
+│       ├── domain/
+│       │   ├── entities/         ← User (সবচেয়ে খাঁটি মডেল)
+│       │   ├── repositories/     ← শুধু abstract class
+│       │   └── usecases/         ← লজিক
+│       └── presentation/
+│           ├── bloc/             ← auth_bloc.dart
+│           └── pages/            ← login_page.dart
+├── injection.dart       ← DI সেটআপ
+└── main.dart
+
 Development work flow
 
 Understanding BLoC Pattern
