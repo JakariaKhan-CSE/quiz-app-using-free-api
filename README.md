@@ -1,4 +1,8 @@
 # quiz_app
+# Apps Working Flow in Clean Architecture Bloc
+
+UI -> bloc -> domain(usecase) -> domain(repositories) -> data(repositories) -> data(datasources) -> data(models)/ entity
+
 
 Understanding BLoC Pattern
 BLoC = Business Logic Component
@@ -38,7 +42,7 @@ State emissions based on logic results
 A new Flutter project.
 Clean Architecture, Bloc State management and hive cache and get it DI
 
-## Working Flow
+## Development Working Flow
 main (not completed) -> core(error(failure), usecase(usecase)) ->
 feature(feature_name) -> domain(entities(look_model)) -> data(model(model_name)) ->
 dart run build_runner build (if use HiveObject)
