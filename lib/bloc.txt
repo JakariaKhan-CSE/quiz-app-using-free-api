@@ -1,3 +1,9 @@
+BlocBuilder<AuthBloc, AuthState>(
+  buildWhen: (prev, curr) => prev.runtimeType != curr.runtimeType,
+  builder: (_, state) { ... },
+);
+
+
 lib/
 ├── core/                ← সবার জন্য কমন জিনিস
 ├── features/
