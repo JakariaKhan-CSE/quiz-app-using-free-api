@@ -16,6 +16,26 @@ lib/
 ├── injection.dart       ← DI সেটআপ
 └── main.dart
 
+
+ইউজার → লগইন বাটন চাপে
+     ↓
+Bloc ← LoginButtonPressed ইভেন্ট পায়
+     ↓
+Bloc → Loading স্টেট ছাড়ে
+     ↓
+Bloc → LoginUseCase কল করে
+     ↓
+UseCase → Repository কল করে
+     ↓
+Repository → API (DataSource) কল করে
+     ↓
+API → JSON → User Entity
+     ↓
+Success → Bloc → AuthSuccess স্টেট
+     ↓
+UI → BlocBuilder দেখে → “স্বাগতম!” দেখায়
+
+
 Development work flow
 
 Understanding BLoC Pattern
